@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <style>
+        @font-face {
+            font-family: "Roboto";
+            src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+    </style>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body class="bg-[#242742]">
+    <!-- <img src="/assets/images/icon-list.svg" alt="">
+<img src="/assets/images/icon-success.svg" alt="">
+<img src="/assets/images/illustration-sign-up-desktop.svg" alt="">
+<img src="/assets/images/illustration-sign-up-mobile.svg" alt=""> -->
+    <div class="flex items-center justify-center h-screen">
+        <div
+            class=" bg-white border border-gray-200  sm:p-0  md:p-4 md:rounded-3xl lg:p-4 lg:rounded-3xl xl:p-4 xl:rounded-3xl 2xl:p-4 2xl:rounded-3xl">
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2">
+                <div class="ml-7 mt-7 sm:mt-7 md:mt-28 lg:mt-28 xl:mt-28 2xl:mt-28">
+                    <h1 class="text-5xl font-black">Stay Updated!</h1>
+                    <p class="mt-5 text-sm">Join 60,000 product managers receiving monthly
+                        <br>
+                        updates on:
+                    </p>
+                    <div class="flex mt-5">
+                        <div class="">
+                            <img class="w-5 mr-4" src="/assets/images/icon-success.svg" alt="">
+                        </div>
+                        <div class="text-sm">
+                            Product discovery and building what matters
+                        </div>
+                    </div>
+                    <div class="flex mt-3">
+                        <div class="">
+                            <img class="w-5 mr-4" src="/assets/images/icon-success.svg" alt="">
+                        </div>
+                        <div class="text-sm">
+                            Product discovery and building what matters
+                        </div>
+                    </div>
+                    <div class="flex mt-3">
+                        <div class="">
+                            <img class="w-5 mr-4" src="/assets/images/icon-success.svg" alt="">
+                        </div>
+                        <div class="text-sm">
+                            Product discovery and building what matters
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="mt-5 sm:mt-5 md:mt-12 lg:mt-12 xl:mt-12 2xl:mt-12">
+                            <div class="flex justify-between max-w-80">
+                                <div class="">
+                                    <label for="email" class="text-sm text-gray-900 font-black ">Email
+                                        Address</label>
+                                </div>
+                                <div>
+                                    <label id="error-message" class="text-xs text-red-400 hidden">Valid email
+                                        required</label>
+                                </div>
+                            </div>
+                            <input type="email" name="email" id="email"
+                                class="block w-80 rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                                placeholder="email@company.com">
+                        </div>
+                        <div class="mt-3 sm:mt-3 md:mt-5 lg:mt-5 xl:mt-5 2xl:mt-5">
+                            <button type="button" name="subscribe" data-modal-target="default-modal"
+                                data-modal-toggle="default-modal" onclick="validateEmail()"
+                                class="w-80 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Subscribe
+                                to monthly newsletter</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end order-first sm:order-first md:order-last xl:order-last 2xl:order-last">
+                    <img class="hidden md:block lg:block xl:block 2xl:block"
+                        src="/assets/images/illustration-sign-up-desktop.svg" alt="">
+                    <img class="2xl:hidden xl:hidden lg:hidden md:hidden"
+                        src="/assets/images/illustration-sign-up-mobile.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main modal -->
+    <div id="default-modal" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-screen max-h-full bg-[#242742]">
+        <div class="p-4 max-w-md max-h-full"> <!-- Adjusted max-w-md here -->
+            <!-- Modal content -->
+            <div class="bg-white rounded-3xl shadow">
+                <!-- Modal body -->
+                <div class="p-4 ml-11">
+                    <img class="w-12 mt-5" src="/assets/images/icon-success.svg" alt="">
+                    <p class="text-5xl font-black mt-7">Thanks for subscribing!</p>
+                    <p class="text-sm mt-7">
+                        A confirmation email has been sent to "asd@gmail.com" please open it and click the <br>button
+                        inside to confirm your subscription
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="flex items-center justify-center pb-12 border-gray-200 rounded-b mt-5">
+                    <button data-modal-hide="default-modal" type="button"
+                        class="py-2.5 w-80 ms-3 text-sm font-medium text-white focus:outline-none bg-[#242742] rounded-lg border border-gray-200 hover:bg-red-500 hover:text-whire focus:z-10 focus:ring-4 focus:ring-gray-100 ">Dismiss
+                        message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="text-white ">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/azka5123">Azka</a>.
+    </div>
+
+    <script>
+        function validateEmail() {
+            var emailInput = document.getElementById("email");
+            var errorMessage = document.getElementById("error-message");
+
+            // Regular expression for email validation
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Check if the email format is valid
+            if (!emailPattern.test(emailInput.value)) {
+                errorMessage.classList.remove("hidden");
+                emailInput.classList.add("bg-red-100");
+                emailInput.classList.add("text-red-400");
+                emailInput.classList.remove("border-0");
+                emailInput.classList.add("border-2");
+                emailInput.classList.add("border-red-300");
+                var modalTarget = document.querySelector("[data-modal-target='default-modal']");
+                if (modalTarget) {
+                    modalTarget.click(); // Trigger the modal opening
+                }
+
+            } else {
+                errorMessage.classList.add("hidden");
+                emailInput.classList.remove("bg-red-100");
+                emailInput.classList.remove("text-red-400");
+                emailInput.classList.remove("border-red-300");
+                emailInput.classList.remove("border-2");
+
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+</body>
+
+</html>
