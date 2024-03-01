@@ -21,14 +21,14 @@
     <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 
-<body class="bg-white 2xl:bg-[#242742]">
+<body class="bg-white md:bg-[#242742] xl:bg-[#242742] 2xl:bg-[#242742]">
     <!-- <img src="/assets/images/icon-list.svg" alt="">
 <img src="/assets/images/icon-success.svg" alt="">
 <img src="/assets/images/illustration-sign-up-desktop.svg" alt="">
 <img src="/assets/images/illustration-sign-up-mobile.svg" alt=""> -->
     <div class="flex items-center justify-center h-screen">
         <div
-            class=" bg-white border border-gray-200  sm:p-0  md:p-4 md:rounded-3xl lg:p-4 lg:rounded-3xl xl:p-4 xl:rounded-3xl 2xl:p-4 2xl:rounded-3xl">
+            class=" bg-white  sm:p-0  md:p-4 md:border md:border-gray-200 md:rounded-3xl lg:p-4 lg:border lg:border-gray-200 lg:rounded-3xl xl:p-4 xl:border xl:border-gray-200 xl:rounded-3xl 2xl:border 2xl:border-gray-200 2xl:p-4 2xl:rounded-3xl">
             <div class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2">
                 <div class="ml-7 mt-7 sm:mt-7 md:mt-28 lg:mt-28 xl:mt-28 2xl:mt-28">
                     <h1 class="text-5xl font-black">Stay Updated!</h1>
@@ -96,8 +96,8 @@
 
     <!-- Main modal -->
     <div id="default-modal" tabindex="-1" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-screen max-h-full bg-[#242742]">
-        <div class="p-4 max-w-md max-h-full"> <!-- Adjusted max-w-md here -->
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-screen max-h-full bg-white md:bg-[#242742]">
+        <div class="p-4 max-w-md max-h-screen "> <!-- Adjusted max-w-md here -->
             <!-- Modal content -->
             <div class="bg-white rounded-3xl shadow">
                 <!-- Modal body -->
@@ -110,7 +110,7 @@
                     </p>
                 </div>
                 <!-- Modal footer -->
-                <div class="flex items-center justify-center pb-12 border-gray-200 rounded-b mt-5">
+                <div class="flex items-center justify-center pb-12 border-gray-200 rounded-b mt-96 md:mt-5">
                     <button data-modal-hide="default-modal" type="button"
                         class="py-2.5 w-80 ms-3 text-sm font-medium text-white focus:outline-none bg-[#242742] rounded-lg border border-gray-200 hover:bg-red-500 hover:text-whire focus:z-10 focus:ring-4 focus:ring-gray-100 ">Dismiss
                         message</button>
